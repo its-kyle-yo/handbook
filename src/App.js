@@ -1,25 +1,28 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-
+import Section from "./components/Section";
+import Prism from "prismjs";
+import "./prism.css";
 class App extends Component {
+  componentDidMount() {
+    Prism.highlightAll();
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Section>
+          <pre>
+            <code className="language-javascript">
+              {`onSubmit(e) {
+                e.preventDefault();
+                const job = {
+                  title: 'Developer',
+                  company: 'Facebook' 
+                };
+              `}
+            </code>
+          </pre>
+        </Section>
       </div>
     );
   }
