@@ -1,0 +1,12 @@
+.tutorial {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.snippet {
+  margin: 0.5em;
+}
+
+img {
+  margin: 0.5em;
+}
